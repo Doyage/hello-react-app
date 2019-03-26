@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import EventPractice from './EventPractice';
+import ScrollBox from './ScrollBox';
+// import ValidationSample from './ValidationSample';
+// import EventPractice from './EventPractice';
 // import MyComponent from './MyComponent';
 
 class App extends Component {
@@ -17,6 +19,15 @@ class App extends Component {
     // };
 
     return (
+      <div>
+        <ScrollBox ref={(ref) => this.ScrollBox=ref} />
+        <button onClick={() => this.ScrollBox.scrollToBottom()}>맨 밑으로</button>
+      </div>
+      
+      // <ValidationSample />
+      
+      // <EventPractice />      
+      
       // <div className="my-div">
       //   <h1>리액트 안녕!</h1>
       //   <h2>{text}</h2>
@@ -24,7 +35,6 @@ class App extends Component {
       //   <div style={style}></div>
       //   <MyComponent name="React" age={29} />
       // </div>
-      <EventPractice />
     );
   }
 }
