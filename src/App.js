@@ -20,6 +20,7 @@ class App extends Component {
 
     return (
       <div>
+        <button onClick={() => this.ScrollBox.scrollToTop()}>맨 위로</button>
         <ScrollBox ref={(ref) => this.ScrollBox=ref} />
         <button onClick={() => this.ScrollBox.scrollToBottom()}>맨 밑으로</button>
       </div>
